@@ -476,6 +476,7 @@ export class QueryManager {
       forceFetch = false,
       returnPartialData = false,
       noFetch = false,
+      metadata = null,
     } = options;
 
     const {
@@ -523,6 +524,7 @@ export class QueryManager {
       storePreviousVariables: shouldFetch,
       isPoll: fetchType === FetchType.poll,
       isRefetch: fetchType === FetchType.refetch,
+      metadata,
     });
 
     // If there is no part of the query we need to fetch from the server (or,
